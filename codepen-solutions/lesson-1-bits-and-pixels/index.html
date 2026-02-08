@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1: Bits and Pixel Rendering</title>
+</head>
+<body>
+  <div class="container">
+    <div class="instructions">
+      <h1>Lesson 1: Bits and Pixel Rendering</h1>
+      <div class="lesson-content">
+        <h2>Welcome to PixelMe!</h2>
+        <p>In this lesson, you'll learn about <strong>bits</strong> and how to render your first pixel on the screen.</p>
+        
+        <h3>What is a Bit?</h3>
+        <p>A <strong>bit</strong> is the smallest unit of data in computing. It can only be one of two values:</p>
+        <ul>
+          <li><code>0</code> or <code>1</code></li>
+          <li><code>false</code> or <code>true</code></li>
+          <li><code>off</code> or <code>on</code></li>
+          <li><strong>black</strong> or <strong>white</strong> (in our pixel world!)</li>
+        </ul>
+        
+        <h3>The Cartesian Coordinate System</h3>
+        <p>To place a pixel on the screen, we need coordinates. Think of it like a map:</p>
+        <ul>
+          <li><code>x</code> = horizontal position (left to right)</li>
+          <li><code>y</code> = vertical position (top to bottom)</li>
+        </ul>
+        <p>Our grid is <strong>20×20</strong>, so x and y go from <code>0</code> to <code>19</code>.</p>
+        
+        <h3>Your Goal</h3>
+        <p>Make a single pixel appear at position <code>(10, 10)</code> - right in the center of the canvas!</p>
+        
+        <h3>How to Do It</h3>
+        <p>Look for the <code>TODO</code> comment in the JavaScript code. Use the <code>renderPixel()</code> function like this:</p>
+        <pre><code>renderPixel(x, y);</code></pre>
+        <p>Replace <code>x</code> and <code>y</code> with the numbers you want!</p>
+      </div>
+      
+      <div class="navigation">
+        <span class="nav-placeholder"></span>
+        <a href="#" class="nav-link next-lesson">Next Lesson: Animation →</a>
+      </div>
+    </div>
+    
+    <div class="game-area">
+      <canvas id="gameCanvas" width="200" height="200"></canvas>
+      <div class="game-info">
+        <p>Your pixel will appear on this canvas!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

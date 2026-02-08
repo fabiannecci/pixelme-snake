@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6: Snake Growth</title>
+</head>
+<body>
+  <div class="container">
+    <div class="instructions">
+      <h1>Lesson 6: Snake Growth</h1>
+      <div class="lesson-content">
+        <h2>Make the Snake Grow!</h2>
+        <p>Now let's make the snake <strong>grow longer</strong> each time it eats food using a <strong>data structure</strong>!</p>
+        
+        <h3>Snake as an Array</h3>
+        <p>Instead of a single position, represent the snake as an <strong>array of segments</strong>:</p>
+        <pre><code>let snake = [
+  { x: 10, y: 10 },  // Head
+  { x: 9, y: 10 },   // Body segment 1
+  { x: 8, y: 10 }    // Body segment 2 (tail)
+];</code></pre>
+        
+        <h3>How Snake Movement Works</h3>
+        <ol>
+          <li>Add a new head in the direction of movement</li>
+          <li>Remove the tail (last segment)</li>
+          <li>This makes it look like the snake is moving forward</li>
+        </ol>
+        <pre><code>// Add new head
+let head = { x: snake[0].x + 1, y: snake[0].y };
+snake.unshift(head);  // Add to front
+
+// Remove tail
+snake.pop();  // Remove from end</code></pre>
+        
+        <h3>How Snake Growth Works</h3>
+        <p>When eating food, <strong>don't remove the tail</strong>:</p>
+        <pre><code>if (collision with food) {
+  // Don't call snake.pop() this time!
+  // Snake is now 1 segment longer
+}</code></pre>
+        
+        <h3>Your Goal</h3>
+        <p>Convert your snake to an array and make it grow when eating food!</p>
+        
+        <h3>Tips</h3>
+        <ul>
+          <li>Use <code>snake[0]</code> to access the head</li>
+          <li>Use a loop to render all segments</li>
+          <li>Track whether to grow with a boolean flag</li>
+        </ul>
+      </div>
+      
+      <div class="navigation">
+        <a href="#" class="nav-link prev-lesson">← Lesson 5: Movement</a>
+        <a href="#" class="nav-link next-lesson">Lesson 7: Game Over →</a>
+      </div>
+    </div>
+    
+    <div class="game-area">
+      <canvas id="gameCanvas" width="200" height="200"></canvas>
+      <div class="game-info">
+        <p>Watch your snake grow!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

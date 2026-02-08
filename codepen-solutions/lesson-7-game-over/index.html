@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 7: Game Over</title>
+</head>
+<body>
+  <div class="container">
+    <div class="instructions">
+      <h1>Lesson 7: Game Over and Self-Collision</h1>
+      <div class="lesson-content">
+        <h2>Complete the Snake Game!</h2>
+        <p>The final piece: <strong>self-collision detection</strong> and <strong>game over state</strong>!</p>
+        
+        <h3>Self-Collision Detection</h3>
+        <p>Check if the snake's head hits any part of its body:</p>
+        <pre><code>function checkSelfCollision() {
+  let head = snake[0];
+  
+  // Check head against all body segments (skip head itself)
+  for (let i = 1; i < snake.length; i++) {
+    if (head.x === snake[i].x && head.y === snake[i].y) {
+      return true;  // Collision detected!
+    }
+  }
+  return false;
+}</code></pre>
+        
+        <h3>Game State Management</h3>
+        <p>Track whether the game is running or over:</p>
+        <pre><code>let gameOver = false;
+
+function update() {
+  if (gameOver) return;  // Don't update if game over
+  
+  // ... normal update code ...
+  
+  if (checkSelfCollision()) {
+    gameOver = true;
+  }
+}</code></pre>
+        
+        <h3>Display Game Over</h3>
+        <p>Show a message on the canvas:</p>
+        <pre><code>if (gameOver) {
+  ctx.fillStyle = '#ff6b6b';
+  ctx.font = '20px Courier';
+  ctx.fillText('GAME OVER', 50, 100);
+}</code></pre>
+        
+        <h3>Your Goal</h3>
+        <p>Add self-collision detection and game over state to complete your Snake game!</p>
+        
+        <h3>Bonus Challenges</h3>
+        <ul>
+          <li>Display the score (snake length)</li>
+          <li>Add a restart button</li>
+          <li>Show "Press R to Restart" message</li>
+        </ul>
+        
+        <h2>🎉 Congratulations!</h2>
+        <p>You've built a complete Snake game and learned fundamental programming concepts!</p>
+      </div>
+      
+      <div class="navigation">
+        <a href="#" class="nav-link prev-lesson">← Lesson 6: Growth</a>
+        <span class="nav-placeholder"></span>
+      </div>
+    </div>
+    
+    <div class="game-area">
+      <canvas id="gameCanvas" width="200" height="200"></canvas>
+      <div class="game-info">
+        <p>Complete Snake game!</p>
+        <p id="score">Score: 3</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

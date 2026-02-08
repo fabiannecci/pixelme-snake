@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3: Keyboard Controls</title>
+</head>
+<body>
+  <div class="container">
+    <div class="instructions">
+      <h1>Lesson 3: Keyboard Controls</h1>
+      <div class="lesson-content">
+        <h2>Take Control!</h2>
+        <p>Now let's make the pixel respond to <strong>your input</strong> using the keyboard arrow keys.</p>
+        
+        <h3>What are Event Listeners?</h3>
+        <p>An <strong>event listener</strong> waits for something to happen (like a key press) and then runs code:</p>
+        <pre><code>document.addEventListener('keydown', function(event) {
+  // Code runs when any key is pressed
+  console.log(event.key);  // Shows which key was pressed
+});</code></pre>
+        
+        <h3>Arrow Keys</h3>
+        <p>The arrow keys have special names:</p>
+        <ul>
+          <li><code>'ArrowUp'</code> - Move up (decrease y)</li>
+          <li><code>'ArrowDown'</code> - Move down (increase y)</li>
+          <li><code>'ArrowLeft'</code> - Move left (decrease x)</li>
+          <li><code>'ArrowRight'</code> - Move right (increase x)</li>
+        </ul>
+        
+        <h3>Your Goal</h3>
+        <p>Make the pixel move when you press arrow keys!</p>
+        
+        <h3>Steps</h3>
+        <ol>
+          <li>Create variables for pixel position: <code>let x = 10; let y = 10;</code></li>
+          <li>Add an event listener for <code>'keydown'</code></li>
+          <li>Check which arrow key was pressed using <code>if</code> statements</li>
+          <li>Update x or y based on the key</li>
+          <li>Re-render the pixel at the new position</li>
+        </ol>
+        
+        <h3>Bonus Challenge</h3>
+        <p>Prevent the pixel from moving outside the grid (x and y should stay between 0 and 19)!</p>
+      </div>
+      
+      <div class="navigation">
+        <a href="#" class="nav-link prev-lesson">← Lesson 2: Animation</a>
+        <a href="#" class="nav-link next-lesson">Lesson 4: Arrays →</a>
+      </div>
+    </div>
+    
+    <div class="game-area">
+      <canvas id="gameCanvas" width="200" height="200"></canvas>
+      <div class="game-info">
+        <p>Use arrow keys to move!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

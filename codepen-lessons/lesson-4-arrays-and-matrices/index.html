@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4: Arrays and Matrices</title>
+</head>
+<body>
+  <div class="container">
+    <div class="instructions">
+      <h1>Lesson 4: Arrays and Matrices</h1>
+      <div class="lesson-content">
+        <h2>Multiple Pixels!</h2>
+        <p>Now that you can control one pixel, let's learn about <strong>arrays</strong> to work with many pixels at once!</p>
+        
+        <h3>What is an Array?</h3>
+        <p>An <strong>array</strong> is a list of values stored together:</p>
+        <pre><code>let numbers = [1, 5, 10, 20];
+console.log(numbers[0]);  // Shows 1 (first item)
+console.log(numbers[2]);  // Shows 10 (third item)</code></pre>
+        <p>Arrays start counting at 0!</p>
+        
+        <h3>What is a Matrix (2D Array)?</h3>
+        <p>A <strong>matrix</strong> is an array of arrays - like a grid:</p>
+        <pre><code>let grid = [
+  [0, 1, 0],  // Row 0
+  [1, 1, 1],  // Row 1
+  [0, 1, 0]   // Row 2
+];</code></pre>
+        <p>Access items with <code>grid[row][column]</code></p>
+        
+        <h3>Rendering a Matrix</h3>
+        <p>Use nested loops to go through each row and column:</p>
+        <pre><code>for (let y = 0; y < grid.length; y++) {
+  for (let x = 0; x < grid[y].length; x++) {
+    if (grid[y][x] === 1) {
+      renderPixel(x, y);
+    }
+  }
+}</code></pre>
+        
+        <h3>Your Goal</h3>
+        <p>Create a 2D array and render it as pixels! Try making a simple pattern or shape.</p>
+        
+        <h3>Pattern Ideas</h3>
+        <ul>
+          <li>A cross or plus sign</li>
+          <li>A checkerboard pattern</li>
+          <li>Your initials!</li>
+        </ul>
+      </div>
+      
+      <div class="navigation">
+        <a href="#" class="nav-link prev-lesson">← Lesson 3: Keyboard</a>
+        <a href="#" class="nav-link next-lesson">Lesson 5: Snake Movement →</a>
+      </div>
+    </div>
+    
+    <div class="game-area">
+      <canvas id="gameCanvas" width="200" height="200"></canvas>
+      <div class="game-info">
+        <p>Pixels from a matrix!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 5: Snake Movement and Collision</title>
+</head>
+<body>
+  <div class="container">
+    <div class="instructions">
+      <h1>Lesson 5: Snake Movement and Collision</h1>
+      <div class="lesson-content">
+        <h2>Build a Snake Game!</h2>
+        <p>Now we're going to combine everything you've learned to create <strong>Snake game movement</strong> and <strong>collision detection</strong>!</p>
+        
+        <h3>How Snake Moves</h3>
+        <p>Unlike our keyboard-controlled pixel, Snake moves <strong>continuously</strong> in one direction:</p>
+        <ul>
+          <li>Snake keeps moving in current direction</li>
+          <li>Arrow keys <strong>change</strong> the direction, not move directly</li>
+          <li>Movement happens automatically in a loop</li>
+        </ul>
+        
+        <h3>Game Loop Pattern</h3>
+        <pre><code>function update() {
+  // Update snake position based on direction
+  // Check for collisions
+}
+
+function gameLoop(timestamp) {
+  if (timestamp - lastTime >= 200) {
+    update();
+    draw();
+    lastTime = timestamp;
+  }
+  requestAnimationFrame(gameLoop);
+}</code></pre>
+        
+        <h3>Collision Detection</h3>
+        <p>Check if snake position matches food position:</p>
+        <pre><code>if (snake.x === food.x && snake.y === food.y) {
+  // Snake ate the food!
+  // Move food to new random position
+}</code></pre>
+        
+        <h3>Your Goal</h3>
+        <p>Create a Snake that:</p>
+        <ol>
+          <li>Moves continuously in one direction</li>
+          <li>Changes direction with arrow keys</li>
+          <li>Detects collision with food</li>
+          <li>Moves food to random position when eaten</li>
+        </ol>
+      </div>
+      
+      <div class="navigation">
+        <a href="#" class="nav-link prev-lesson">← Lesson 4: Arrays</a>
+        <a href="#" class="nav-link next-lesson">Lesson 6: Growth →</a>
+      </div>
+    </div>
+    
+    <div class="game-area">
+      <canvas id="gameCanvas" width="200" height="200"></canvas>
+      <div class="game-info">
+        <p>Your first Snake game!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

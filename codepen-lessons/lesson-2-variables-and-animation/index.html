@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2: Variables and Animation</title>
+</head>
+<body>
+  <div class="container">
+    <div class="instructions">
+      <h1>Lesson 2: Variables and Animation</h1>
+      <div class="lesson-content">
+        <h2>Making Things Move!</h2>
+        <p>Now that you can draw a pixel, let's make it <strong>move</strong> across the screen using variables, operations, and loops.</p>
+        
+        <h3>What are Variables?</h3>
+        <p><strong>Variables</strong> are containers that store values. Think of them like boxes with labels:</p>
+        <pre><code>let x = 0;  // A box labeled 'x' containing the number 0</code></pre>
+        <p>You can change what's in the box:</p>
+        <pre><code>x = x + 1;  // Add 1 to x (now x is 1)</code></pre>
+        
+        <h3>What is a Loop?</h3>
+        <p>A <strong>loop</strong> runs code over and over again. We use <code>requestAnimationFrame</code> - a special loop for animation:</p>
+        <pre><code>function gameLoop() {
+  // This code runs many times per second
+  requestAnimationFrame(gameLoop);
+}</code></pre>
+        
+        <h3>How Animation Works</h3>
+        <ol>
+          <li>Clear the canvas (erase old pixel)</li>
+          <li>Update the position (change x or y)</li>
+          <li>Draw the pixel at new position</li>
+          <li>Repeat!</li>
+        </ol>
+        
+        <h3>Your Goal</h3>
+        <p>Make a pixel move from left to right across the screen!</p>
+        
+        <h3>Hints</h3>
+        <ul>
+          <li>Create a variable <code>let x = 0;</code> for the pixel position</li>
+          <li>In the loop: clear canvas, update <code>x = x + 1</code>, render pixel</li>
+          <li>If x goes past 19, reset it to 0 to loop around</li>
+        </ul>
+      </div>
+      
+      <div class="navigation">
+        <a href="#" class="nav-link prev-lesson">← Lesson 1: Bits</a>
+        <a href="#" class="nav-link next-lesson">Lesson 3: Keyboard →</a>
+      </div>
+    </div>
+    
+    <div class="game-area">
+      <canvas id="gameCanvas" width="200" height="200"></canvas>
+      <div class="game-info">
+        <p>Watch your pixel come to life!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
