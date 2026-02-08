@@ -96,15 +96,15 @@ Embedded in the HTML panel:
 ### Student Collection (Starter Code)
 *Students fork these and complete the TODOs*
 
-**Collection URL:** `[Add your CodePen collection URL here]`
+**Collection URL:** [https://codepen.io/collection/bGWgvj](https://codepen.io/collection/bGWgvj)
 
-- [Lesson 1: Bits and Pixels](https://codepen.io/your-collection/lesson-1) - Render a single pixel
-- [Lesson 2: Variables and Animation](https://codepen.io/your-collection/lesson-2) - Animated pixel
-- [Lesson 3: Keyboard Controls](https://codepen.io/your-collection/lesson-3) - Arrow key control
-- [Lesson 4: Arrays and Matrices](https://codepen.io/your-collection/lesson-4) - Pixel grids
-- [Lesson 5: Snake Movement](https://codepen.io/your-collection/lesson-5) - Continuous movement
-- [Lesson 6: Snake Growth](https://codepen.io/your-collection/lesson-6) - Growing snake
-- [Lesson 7: Game Over](https://codepen.io/your-collection/lesson-7) - Complete game!
+- [Lesson 1: Bits and Pixels](https://codepen.io/fnecci/pen/emzPKKM) - Render a single pixel
+- [Lesson 2: Variables and Animation](https://codepen.io/fnecci/pen/ogLayKK) - Animated pixel
+- [Lesson 3: Keyboard Controls](https://codepen.io/fnecci/pen/VYjEBaL) - Arrow key control
+- [Lesson 4: Arrays and Matrices](https://codepen.io/fnecci/pen/qENJyNW) - Pixel grids
+- [Lesson 5: Snake Movement](https://codepen.io/fnecci/pen/WbxaKGd) - Continuous movement
+- [Lesson 6: Snake Growth](https://codepen.io/fnecci/pen/WbxaKod) - Growing snake
+- [Lesson 7: Game Over](https://codepen.io/fnecci/pen/myEzjMR) - Complete game!
 
 ### Solutions Collection (Reference)
 *For instructors and student comparison*

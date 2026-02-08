@@ -27,6 +27,5 @@ This directory contains the code for 7 progressive lessons. Each lesson folder c
 
 ## CodePen Collection Links
 
-After creating your CodePen collection, update these links:
-- Main Collection: [Your URL Here]
+- Main Collection: [https://codepen.io/collection/bGWgvj](https://codepen.io/collection/bGWgvj)
 - Solutions Collection: [Your URL Here]
